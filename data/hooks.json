@@ -1,0 +1,167 @@
+[
+  {
+    "id": "auto-lint-on-save",
+    "name": "Auto Lint on Save",
+    "category": "File & Directory",
+    "event": "FileChanged",
+    "hookType": "command",
+    "description": "Runs ESLint --fix automatically whenever a file is saved, keeping code style consistent without manual intervention.",
+    "repoUrl": "https://github.com/anthropics/claude-code-hooks",
+    "repoName": "anthropics/claude-code-hooks",
+    "author": "anthropics"
+  },
+  {
+    "id": "session-timer",
+    "name": "Session Timer",
+    "category": "Session Lifecycle",
+    "event": "SessionStart",
+    "hookType": "command",
+    "description": "Logs session start time and displays elapsed duration, helping track how long coding sessions last.",
+    "repoUrl": "https://github.com/example/session-timer-hook",
+    "repoName": "example/session-timer-hook",
+    "author": "example"
+  },
+  {
+    "id": "prompt-guardrails",
+    "name": "Prompt Guardrails",
+    "category": "Prompt & Workflow",
+    "event": "UserPromptSubmit",
+    "hookType": "prompt",
+    "description": "Validates user prompts against a set of safety rules before submission, preventing accidental destructive commands.",
+    "repoUrl": "https://github.com/example/prompt-guardrails",
+    "repoName": "example/prompt-guardrails",
+    "author": "example"
+  },
+  {
+    "id": "tool-usage-logger",
+    "name": "Tool Usage Logger",
+    "category": "Tool Execution",
+    "event": "PostToolUse",
+    "hookType": "command",
+    "description": "Logs every tool invocation to a local JSON file for auditing and usage analytics.",
+    "repoUrl": "https://github.com/example/tool-logger",
+    "repoName": "example/tool-logger",
+    "author": "example"
+  },
+  {
+    "id": "permission-slack-notify",
+    "name": "Permission Slack Notifier",
+    "category": "Permissions & Notifications",
+    "event": "PermissionRequest",
+    "hookType": "http",
+    "description": "Sends a Slack webhook notification whenever Claude requests elevated permissions, keeping the team informed.",
+    "repoUrl": "https://github.com/example/permission-notifier",
+    "repoName": "example/permission-notifier",
+    "author": "example"
+  },
+  {
+    "id": "subagent-resource-limiter",
+    "name": "Subagent Resource Limiter",
+    "category": "Agent Teams",
+    "event": "SubagentStart",
+    "hookType": "command",
+    "description": "Enforces memory and CPU limits when subagents spawn, preventing runaway resource consumption.",
+    "repoUrl": "https://github.com/example/subagent-limiter",
+    "repoName": "example/subagent-limiter",
+    "author": "example"
+  },
+  {
+    "id": "context-summary-precompact",
+    "name": "Context Summary",
+    "category": "Context",
+    "event": "PreCompact",
+    "hookType": "prompt",
+    "description": "Injects a structured summary prompt before context compaction, ensuring critical information is preserved.",
+    "repoUrl": "https://github.com/example/context-summary",
+    "repoName": "example/context-summary",
+    "author": "example"
+  },
+  {
+    "id": "git-worktree-setup",
+    "name": "Git Worktree Setup",
+    "category": "Git",
+    "event": "WorktreeCreate",
+    "hookType": "command",
+    "description": "Automatically installs dependencies and sets up environment files when a new git worktree is created.",
+    "repoUrl": "https://github.com/example/worktree-setup",
+    "repoName": "example/worktree-setup",
+    "author": "example"
+  },
+  {
+    "id": "cwd-env-loader",
+    "name": "CWD Env Loader",
+    "category": "File & Directory",
+    "event": "CwdChanged",
+    "hookType": "command",
+    "description": "Loads project-specific environment variables from .env files whenever the working directory changes.",
+    "repoUrl": "https://github.com/example/cwd-env-loader",
+    "repoName": "example/cwd-env-loader",
+    "author": "example"
+  },
+  {
+    "id": "pre-tool-validator",
+    "name": "Pre-Tool Validator",
+    "category": "Tool Execution",
+    "event": "PreToolUse",
+    "hookType": "agent",
+    "description": "Uses an LLM to validate tool arguments before execution, catching potentially harmful operations early.",
+    "repoUrl": "https://github.com/example/pre-tool-validator",
+    "repoName": "example/pre-tool-validator",
+    "author": "example"
+  },
+  {
+    "id": "session-cleanup",
+    "name": "Session Cleanup",
+    "category": "Session Lifecycle",
+    "event": "SessionEnd",
+    "hookType": "command",
+    "description": "Cleans up temporary files and resets environment state when a coding session ends.",
+    "repoUrl": "https://github.com/example/session-cleanup",
+    "repoName": "example/session-cleanup",
+    "author": "example"
+  },
+  {
+    "id": "stop-failure-reporter",
+    "name": "Stop Failure Reporter",
+    "category": "Prompt & Workflow",
+    "event": "StopFailure",
+    "hookType": "http",
+    "description": "Reports stop failures to an external monitoring endpoint for debugging and reliability tracking.",
+    "repoUrl": "https://github.com/example/stop-failure-reporter",
+    "repoName": "example/stop-failure-reporter",
+    "author": "example"
+  },
+  {
+    "id": "notification-desktop-alert",
+    "name": "Desktop Alert",
+    "category": "Permissions & Notifications",
+    "event": "Notification",
+    "hookType": "command",
+    "description": "Displays native OS desktop notifications for important Claude Code events, even when the terminal is in the background.",
+    "repoUrl": "https://github.com/example/desktop-alert",
+    "repoName": "example/desktop-alert",
+    "author": "example"
+  },
+  {
+    "id": "teammate-idle-ping",
+    "name": "Teammate Idle Ping",
+    "category": "Agent Teams",
+    "event": "TeammateIdle",
+    "hookType": "http",
+    "description": "Sends a webhook ping when a teammate agent goes idle, enabling orchestration of multi-agent workflows.",
+    "repoUrl": "https://github.com/example/teammate-idle-ping",
+    "repoName": "example/teammate-idle-ping",
+    "author": "example"
+  },
+  {
+    "id": "instructions-injector",
+    "name": "Instructions Injector",
+    "category": "Session Lifecycle",
+    "event": "InstructionsLoaded",
+    "hookType": "prompt",
+    "description": "Dynamically appends project-specific instructions when CLAUDE.md files are loaded, customizing behavior per-repo.",
+    "repoUrl": "https://github.com/example/instructions-injector",
+    "repoName": "example/instructions-injector",
+    "author": "example"
+  }
+]
