@@ -1,0 +1,10 @@
+{
+  "enabledPlugins": {
+    "commit-commands@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": ["Write", "MultiEdit", "Edit", "Bash"],
+    "deny": []
+  }
+}

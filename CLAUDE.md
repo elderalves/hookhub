@@ -20,3 +20,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Architecture
 
 Standard Next.js App Router layout — all routes live under `app/`. Currently a single-page scaffold with `app/layout.tsx` (root layout with Geist fonts) and `app/page.tsx`.
+
+## LangGraph
+
+When discussing LangGraph, always use context7 MCP

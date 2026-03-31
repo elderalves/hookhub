@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import { getAllHooks, getCategories } from "@/lib/hooks";
-import Header from "./components/Header";
+import Header from "./components/Headers/Header5";
 import CategoryFilter from "./components/CategoryFilter";
 import FAQ from "./components/FAQ";
+import TestimonialCarousel from "./components/TestimonialCarousel";
 
 export default function Home() {
   const hooks = getAllHooks();
@@ -17,6 +18,7 @@ export default function Home() {
             <CategoryFilter hooks={hooks} categories={categories} />
           </Suspense>
         </main>
+        <TestimonialCarousel />
         <FAQ />
         <footer className="border-t border-slate-800/50 py-8 text-center">
           <p className="text-sm text-slate-600">
