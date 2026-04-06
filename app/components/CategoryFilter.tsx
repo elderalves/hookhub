@@ -51,10 +51,10 @@ export default function CategoryFilter({
       <div className="flex gap-2 overflow-x-auto pb-6 -mx-1 px-1 mb-2">
         <button
           onClick={() => handleSelect(null)}
-          className={`shrink-0 flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 border ${
+          className={`shrink-0 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 border ${
             !selected
-              ? "border-indigo-500/50 bg-indigo-500/15 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]"
-              : "border-slate-700/50 bg-slate-800/50 text-slate-400 hover:border-slate-600 hover:text-slate-300"
+              ? "border-accent bg-accent/10 text-accent"
+              : "border-border bg-surface text-muted hover:border-foreground/20 hover:text-foreground"
           }`}
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -66,10 +66,10 @@ export default function CategoryFilter({
           <button
             key={cat}
             onClick={() => handleSelect(cat)}
-            className={`shrink-0 flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 border ${
+            className={`shrink-0 flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 border ${
               selected === cat
-                ? "border-indigo-500/50 bg-indigo-500/15 text-indigo-300 shadow-[0_0_15px_rgba(99,102,241,0.15)]"
-                : "border-slate-700/50 bg-slate-800/50 text-slate-400 hover:border-slate-600 hover:text-slate-300"
+                ? "border-accent bg-accent/10 text-accent"
+                : "border-border bg-surface text-muted hover:border-foreground/20 hover:text-foreground"
             }`}
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

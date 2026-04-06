@@ -10,8 +10,8 @@ export default function Home() {
   const categories = getCategories();
 
   return (
-    <div className="min-h-screen noise-bg grid-pattern">
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Header hookCount={hooks.length} />
         <main className="pb-16">
           <Suspense>
@@ -20,8 +20,8 @@ export default function Home() {
         </main>
         <TestimonialCarousel />
         <FAQ />
-        <footer className="border-t border-slate-800/50 py-8 text-center">
-          <p className="text-sm text-slate-600">
+        <footer className="border-t border-border py-10 text-center">
+          <p className="text-sm text-muted-light">
             Built for the Claude Code community
           </p>
         </footer>

@@ -1,9 +1,9 @@
 export default function EmptyState() {
   return (
     <div className="flex flex-col items-center justify-center py-20 text-center">
-      <div className="w-16 h-16 rounded-2xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-2xl bg-surface-elevated flex items-center justify-center mb-4">
         <svg
-          className="w-8 h-8 text-slate-600"
+          className="w-8 h-8 text-muted-light"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -16,8 +16,8 @@ export default function EmptyState() {
           />
         </svg>
       </div>
-      <p className="text-lg font-medium text-slate-300">No hooks found</p>
-      <p className="text-sm text-slate-500 mt-1">
+      <p className="text-lg font-medium text-foreground">No hooks found</p>
+      <p className="text-sm text-muted mt-1">
         Try selecting a different category.
       </p>
     </div>

@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "Can hooks modify Claude's behavior?",
     answer:
-      'Yes. Prompt-type hooks can inject instructions into the conversation. PreToolUse hooks can block or modify tool calls before they execute. Hooks on UserPromptSubmit can validate or transform prompts. This makes hooks a powerful mechanism for guardrails and customization.',
+      "Yes. Prompt-type hooks can inject instructions into the conversation. PreToolUse hooks can block or modify tool calls before they execute. Hooks on UserPromptSubmit can validate or transform prompts. This makes hooks a powerful mechanism for guardrails and customization.",
   },
   {
     question: "Are hooks safe to use?",
@@ -47,14 +47,14 @@ function FAQItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border border-slate-800 rounded-xl overflow-hidden transition-colors hover:border-slate-700">
+    <div className="border-b border-border last:border-b-0">
       <button
         onClick={onToggle}
-        className="flex items-center justify-between w-full px-6 py-5 text-left"
+        className="flex items-center justify-between w-full py-5 text-left"
       >
-        <span className="font-medium text-slate-200 pr-4">{question}</span>
+        <span className="font-medium text-foreground pr-4">{question}</span>
         <svg
-          className={`w-5 h-5 shrink-0 text-slate-500 transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
+          className={`w-5 h-5 shrink-0 text-muted-light transition-transform duration-200 ${isOpen ? "rotate-45" : ""}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -67,7 +67,7 @@ function FAQItem({
         className={`grid transition-all duration-200 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
       >
         <div className="overflow-hidden">
-          <p className="px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+          <p className="pb-5 text-sm text-muted leading-relaxed">
             {answer}
           </p>
         </div>
@@ -80,16 +80,16 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 mt-8 border-t border-slate-800/50">
+    <section className="py-16 mt-8 border-t border-border">
       <div className="text-center mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-3">
           Frequently Asked Questions
         </h2>
-        <p className="text-slate-400">
+        <p className="text-muted">
           Everything you need to know about Claude Code hooks.
         </p>
       </div>
-      <div className="max-w-3xl mx-auto flex flex-col gap-3">
+      <div className="max-w-3xl mx-auto">
         {faqs.map((faq, i) => (
           <FAQItem
             key={i}

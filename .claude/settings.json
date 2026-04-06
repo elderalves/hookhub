@@ -6,5 +6,9 @@
   "permissions": {
     "allow": ["Write", "MultiEdit", "Edit", "Bash"],
     "deny": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "uv run /Applications/MAMP/htdocs/mtc/mtc-claude-code/book-agentic-code/hookhub/.claude/statusline.py"
   }
 }
